@@ -1,0 +1,37 @@
+.characters__buttons {
+  font-size: 24px;
+  margin: 0 auto;
+
+  button {
+    font-size: 1em;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(208, 72, 236);
+    border-radius: 10px;
+
+    &:enabled {
+      background-color: rgb(224, 110, 246);
+
+      &:hover {
+        background-color: rgb(229, 153, 244);
+      }
+    }
+    @media (max-width: 850px) {
+      font-size: 0.75em;
+      width: 150px;
+    }
+    @media (max-width: 650px) {
+      width: 125px;
+      height: 40px;
+    }
+  }
+
+  .characters__buttons-pages {
+    margin-left: 5px;
+    margin-right: 5px;
+
+    @media (max-width: 650px) {
+      font-size: 0.75em;
+    }
+  }
+}

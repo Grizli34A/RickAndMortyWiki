@@ -1,0 +1,60 @@
+.filter {
+  background-color: rgb(216, 234, 243);
+  height: 30%;
+  width: 75%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  padding-bottom: 10px;
+  padding-left: 5px;
+
+  @media (max-width: 550px) {
+    margin: 10px auto;
+  }
+  button {
+    background-color: rgb(155, 155, 235);
+    width: fit-content;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-right: 5px;
+
+    @media (max-width: 1200px) {
+      height: fit-content;
+      font-size: 24px;
+    }
+
+    &:hover {
+      background-color: rgb(227, 227, 251);
+    }
+
+    &.active {
+      background-color: rgb(247, 43, 70);
+    }
+  }
+
+  &__status,
+  &__species,
+  &__gender {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%; // Положение полоски (может потребоваться настройка)
+      transform: translateX(-50%); // Центрирование полоски
+      width: 75%; // Длина полоски (может потребоваться настройка)
+      height: 2px; // Толщина полоски
+      background-color: #622db1; // Цвет полоски
+    }
+  }
+  &__status-header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,24 @@
+.header__menu {
+  background-color: rgb(128, 19, 231);
+  font-size: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+.header__nav-link {
+  color: white;
+  text-decoration: none;
+  &.active {
+    color: rgb(185, 232, 16);
+  }
+  &:hover {
+    color: red;
+  }
+  @media (max-width: 850px) {
+    font-size: 0.75em;
+  }
+  @media (max-width: 550px) {
+    font-size: 0.5em;
+  }
+}

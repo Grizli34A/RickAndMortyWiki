@@ -1,0 +1,26 @@
+.characters__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.characters__body {
+  display: flex;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
+  .characters__nodata {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 32px;
+    font-weight: 600;
+
+    @media (max-width: 650px) {
+      left: 65%;
+    }
+    @media (max-width: 550px) {
+      left: 40%;
+      top: 75%;
+    }
+  }
+}

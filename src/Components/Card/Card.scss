@@ -1,0 +1,78 @@
+.card {
+  background-color: rgb(138, 138, 244);
+  border-radius: 5%;
+  width: calc((100% - 120px) / 4);
+  margin: 15px 15px;
+  padding-bottom: 10px;
+  position: relative;
+  & > h1 {
+    margin-top: 15%;
+    color: rgb(181, 12, 12);
+  }
+  & > img {
+    pointer-events: none;
+  }
+  @media (max-width: 1600px) {
+    width: calc((100% - 90px) / 3);
+    & > h1 {
+      font-size: 1.75em;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    width: calc((100% - 60px) / 2);
+  }
+
+  @media (max-width: 850px) {
+    width: calc(100% - 60px);
+    & > h1 {
+      font-size: 2.75em;
+    }
+  }
+  @media (max-width: 550px) {
+    width: calc(100% - 20px);
+    & > h1 {
+      font-size: 2em;
+    }
+  }
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+}
+.card__status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+  width: 30%;
+  &.alive {
+    background-color: rgb(76, 219, 76);
+  }
+  &.dead {
+    background-color: rgb(213, 72, 72);
+  }
+  &.unknown {
+    background-color: grey;
+  }
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 26px;
+  }
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
+}
+.card__info {
+  background-color: rgb(227, 218, 207);
+  opacity: 0.8;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 24px;
+  z-index: 1;
+}
